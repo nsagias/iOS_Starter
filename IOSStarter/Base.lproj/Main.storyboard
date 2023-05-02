@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,34 +13,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOSStarter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chameleons App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hR-yu-GqG">
-                                <rect key="frame" x="142" y="159" width="130" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chameleons App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hR-yu-GqG">
+                                <rect key="frame" x="131.66666666666666" y="174" width="129.99999999999997" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="TZp-Nc-nNv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ios_project_chameleon_1" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-xl-VqU">
-                                <rect key="frame" x="57" y="202" width="305" height="234"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M7-Oo-cTV">
-                                <rect key="frame" x="124" y="465" width="157" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0M7-Oo-cTV">
+                                <rect key="frame" x="124" y="421" width="136" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="Lbn-H9-4Xc"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Change Image"/>
+                                <connections>
+                                    <action selector="changeImageClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTI-2v-lfu"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios_project_chameleon_1" translatesAutoresizingMaskIntoConstraints="NO" id="dlR-xl-VqU">
+                                <rect key="frame" x="50" y="217" width="284" height="175"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dlR-xl-VqU" firstAttribute="centerX" secondItem="0M7-Oo-cTV" secondAttribute="centerX" id="1or-z4-Ipj"/>
+                            <constraint firstItem="5hR-yu-GqG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="9vF-5J-n6P"/>
+                            <constraint firstItem="dlR-xl-VqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="TI1-4a-JS1"/>
+                            <constraint firstItem="0M7-Oo-cTV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="WKX-wK-2de"/>
+                            <constraint firstItem="0M7-Oo-cTV" firstAttribute="top" secondItem="dlR-xl-VqU" secondAttribute="bottom" constant="29" id="fUk-1H-xRZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dlR-xl-VqU" secondAttribute="trailing" constant="59" id="gSj-pb-zhK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0M7-Oo-cTV" secondAttribute="bottom" constant="314" id="gwc-8l-7wL"/>
+                            <constraint firstItem="5hR-yu-GqG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pz8-Zg-4zX"/>
+                            <constraint firstItem="dlR-xl-VqU" firstAttribute="top" secondItem="5hR-yu-GqG" secondAttribute="bottom" constant="8" id="sLu-UT-XEZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ChameleonLabel" destination="5hR-yu-GqG" id="aTn-j0-JFT"/>
+                        <outlet property="imageView" destination="dlR-xl-VqU" id="0vj-jn-688"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86.956521739130437" y="-28.125"/>
+            <point key="canvasLocation" x="305" y="-174"/>
         </scene>
     </scenes>
     <resources>
